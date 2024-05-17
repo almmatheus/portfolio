@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    font-family: "Open Sans", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    background-color: rgb(23, 23, 23);
+    padding: 20px 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /*tag responsável pela hierarquia de de sobreposição*/
+    z-index: 999;
+}
+
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header nav ul li a:hover{
+    color: hotpink;
+    border-bottom: 2px solid hotpink;
+}
+
+header h2,
+span{
+    text-shadow: 0 0 10px hotpink;
+}
+
+h1, h2, h3{
+    color: hotpink;
+}
+
+h1{
+    font-size: 45px;
+    font-weight: 800px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 35px;
+    font-weight: 600px;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: 400px;
+}
+
+p, form{
+    color: white;
+    font-size: 20px;
+}
+
+section{
+    padding-top: 120px;
+    margin: 0px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.texto-home,
+.texto-sobre{
+    width: 50%;
+}
+
+.home img{
+    width: 20%;
+    margin: 0px auto;
+}
+
+.sobre img{
+    width: 45%;
+    margin: 0px auto;
+}
+
+.texto-sobre{
+    margin-bottom: 15px;
+}
+
+.texto-sobre p{
+    font-size: 20px;
+}
+
+.servicos,
+.portfolio{
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.servicos h2,
+.portfolio h2,
+.contato h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.box{
+    border: 2px solid hotpink;
+    text-align: center;
+    flex-basis: 250px;
+    padding: 30px;
+    color: rgb(255, 65, 160);
+}
+
+.box:hover{
+    box-shadow: 0 0 10px rgb(255, 65, 160);
+    text-shadow: 0 0 5px rgb(255, 65, 160);
+}
+
+ion-icon{
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.projeto{
+    flex-basis: 350px;
+    border: 2px solid rgb(255, 65, 160);
+    padding: 20px;
+    position: relative;
+}
+
+.projeto:hover{
+    box-shadow: 0 0 15px hotpink;
+    text-shadow: 0 0 5px rgb(255, 65, 160);
+}
+
+.projeto p{
+    text-shadow: none;
+}
+
+
+
+.projeto img{
+    width: 100%;
+    margin: 20px auto;
+}
+
+.projeto a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.projeto a:hover{
+    color: rgb(255, 65, 160);
+}
+
+.contato{
+    gap: 20px;
+}
+
+.foto-contato,
+form{
+    width: 40%;
+}
+
+.foto-contato{
+    background-image: url("IMG/perfil3.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.gradiente{
+    width: 100%;
+    height: 1000px;
+    background-image: linear-gradient(to bottom, transparent 50%, black 80%);
+}
+
+form{
+    color: white;
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.form{
+    margin-bottom: 15px;
+}
+
+label, 
+input, 
+textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+input:focus,
+textarea:focus{
+    outline: 3px solid rgb(255, 65, 160);
+}
+
+button{
+    color: white;
+    background-color: hotpink;
+    padding: 15px 60px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+button:hover{
+    background-color: rgb(255, 65, 160);
+}
+
+footer{
+    text-align: center;
+    border-top: 3px solid white;
+    padding-top: 30px;
+}
+
+footer ul li{
+    display: inline-block;
+    margin: 20px 35px;
+}
+
+.social ul li a ion-icon{
+    color: rgb(255, 65, 160);
+    font-size: 50px;
+}
+
+.social ul li a ion-icon:hover{
+    color: rgb(255, 119, 187);
+}
+
+@media only screen and (max-width: 837px){
+    header{
+        display: block;
+        text-align: center;
+    }
+
+    section{
+        padding-top: 150px;
+    }
+
+    .home,
+    .sobre,
+    .contato{
+        flex-direction: column;
+    }
+
+    .texto-home,
+    .sobre img,
+    .texto-sobre,
+    .foto-contato,
+    form{
+        width: 100%;
+    }
+
+    .home img{
+        width: 50%;
+    }
+
+    .gradiente{
+        width: 100%;
+        height: 500px;
+        background-image: linear-gradient(to bottom, transparent 50%, black 80%);
+    }
+
+}
